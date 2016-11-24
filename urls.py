@@ -1,4 +1,4 @@
-"""assgin1 URL Configuration
+"""blog URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.10/topics/http/urls/
@@ -15,17 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from assgin1.blog import views
-from assgin1.todo import view
+from blog1 import views
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^blog/entries/?$', views.data),
-   url(r'^$', view.show_todo),
-  url(r'^(?P<todo_id>[0-9]+)', view.get_todo),
-    #url('^blog/entries/(?P<key>[0-9]+)/?$', views.getData)
-        url(r'^blog/entries/([0-9]+)/', views.getData),
-
-
-
+    url(r'^blog/entries',views.data)
 ]
